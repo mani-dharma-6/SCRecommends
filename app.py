@@ -51,7 +51,7 @@ def get_recommendations(product_id, cosine_sim=cosine_sim, data=df1):
 
     # If no match is found, return an empty list
     if not indices:
-        return "The product is not in the cart, could you please retry"
+        return "The product you have searched is not available, could you please retry"
 
     # Get the pairwise similarity scores of all products with those products
     sim_scores = [(i, cosine_sim[idx][i]) for idx in indices for i in range(len(cosine_sim[idx]))]
